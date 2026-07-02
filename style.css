@@ -210,25 +210,47 @@ transform:scale(1.05);
 box-shadow:0 0 25px cyan;
 }
 
-/* Grid */
+/* Innovation Grid */
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:30px;
 margin-top:50px;
 }
 
+.feature{
+background:rgba(255,255,255,.05);
+padding:35px 25px;
+border-radius:18px;
+text-align:center;
+border:1px solid rgba(0,255,255,.25);
+transition:.4s;
+backdrop-filter:blur(10px);
+}
+
+.feature:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px cyan;
+}
+
 .feature img{
-    width:90px;
-    height:90px;
-    object-fit:contain;
-    margin-bottom:20px;
-    transition:0.4s;
+width:90px;
+height:90px;
+object-fit:contain;
+margin-bottom:20px;
+transition:.4s;
 }
 
 .feature:hover img{
-    transform:scale(1.15) rotate(5deg);
+transform:scale(1.15) rotate(5deg);
+}
+
+.feature h3{
+font-size:28px;
+font-weight:700;
+line-height:1.4;
+color:#fff;
 }
 
 /* Parallax */
@@ -373,7 +395,19 @@ grid-template-columns:1fr;
 }
 
 .grid{
-grid-template-columns:1fr;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:20px;
 }
 
+.feature{
+padding:25px 15px;
+}
+
+.feature img{
+width:70px;
+height:70px;
+}
+
+.feature h3{
+font-size:22px;
 }
