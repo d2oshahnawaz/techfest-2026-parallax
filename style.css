@@ -210,23 +210,30 @@ transform:scale(1.05);
 box-shadow:0 0 25px cyan;
 }
 
-/* Innovation Grid */
+//* =========================
+   Innovation Grid
+========================= */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(3,1fr);
 gap:30px;
 margin-top:50px;
 }
 
 .feature{
 background:rgba(255,255,255,.05);
-padding:35px 25px;
-border-radius:18px;
-text-align:center;
 border:1px solid rgba(0,255,255,.25);
-transition:.4s;
+border-radius:18px;
+padding:35px 20px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+min-height:260px;
+text-align:center;
 backdrop-filter:blur(10px);
+transition:.4s;
 }
 
 .feature:hover{
@@ -247,7 +254,7 @@ transform:scale(1.15) rotate(5deg);
 }
 
 .feature h3{
-font-size:28px;
+font-size:26px;
 font-weight:700;
 line-height:1.4;
 color:#fff;
@@ -330,8 +337,6 @@ transform:translateY(0);
 
 }
 
-/* Responsive */
-
 @media(max-width:768px){
 
 header{
@@ -394,20 +399,52 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
+/* Innovation Grid */
+
 .grid{
-grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+grid-template-columns:repeat(2,1fr);
 gap:20px;
 }
 
 .feature{
-padding:25px 15px;
+padding:20px 15px;
+min-height:220px;
 }
 
 .feature img{
-width:70px;
-height:70px;
+width:65px;
+height:65px;
 }
 
 .feature h3{
-font-size:22px;
+font-size:20px;
+}
+
+}
+
+/* Small Phones */
+
+@media(max-width:480px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.feature{
+min-height:200px;
+}
+
+.feature img{
+width:60px;
+height:60px;
+}
+
+.feature h3{
+font-size:18px;
+}
+
+.content h1{
+font-size:34px;
+}
+
 }
